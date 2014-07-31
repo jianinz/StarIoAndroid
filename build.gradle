@@ -1,0 +1,46 @@
+buildscript {
+    repositories {
+        repositories.mavenCentral()
+        /* setup your own artifactory, or put into /lib*/
+        maven { url 'http://localhost:7070/artifactory/repo' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.12.+'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    /* setup your own artifactory, or put into /lib */
+    maven { url 'http://localhost:7070/artifactory/repo' }
+}
+
+dependencies {
+    /* downloaded from http://www.starasia.com/tsp650driverdownload.asp, then place it in your own artifactory*/
+    compile 'com.starmicronics.stario:stario:3.10'
+}
+
+android {
+    buildToolsVersion "20"
+    compileSdkVersion 19
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 19
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+        }
+        androidTest.setRoot('src/test')
+    }
+}
+
+
+

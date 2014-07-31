@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <ScrollView android:layout_width="fill_parent" android:id="@+id/scrollView1" android:layout_height="fill_parent">
+  <RelativeLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:layout_height="wrap_content" android:src="@drawable/code39" android:layout_width="wrap_content" android:id="@+id/imageView_CodeView39" android:layout_centerHorizontal="true"></ImageView>
+    <TextView android:id="@+id/textView_Height" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Height (Max 255)" android:layout_below="@+id/imageView_CodeView39"/>
+	<EditText android:id="@+id/editText_Height" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_Height" android:inputType="number"/>
+	<TextView android:id="@+id/textView_Width" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/editText_Height" android:text="Width" android:textAppearance="?android:attr/textAppearanceMedium"/>
+	<Spinner android:id="@+id/spinner_Width" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_Width"/>
+	<TextView android:id="@+id/barcode_Type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/spinner_Width" android:text="Barcode Type" android:textAppearance="?android:attr/textAppearanceMedium"/>
+	<Spinner android:id="@+id/spinner_barcodeType" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/barcode_Type"/>
+	<TextView android:id="@+id/textView_barcodeData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/spinner_barcodeType" android:text="Barcode Data" android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+	<EditText
+	    android:id="@+id/editText_barcodeData"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/textView_barcodeData"
+	    android:inputType="text"
+	    android:text="0123456789" />
+
+	<Button android:text="Help" android:id="@+id/button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  android:layout_below="@+id/editText_barcodeData" android:onClick="Help"/>
+
+	<Button
+	    android:id="@+id/button_print"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:onClick="PrintBarCodeData"
+	    android:text="Print" />
+
+    </RelativeLayout>
+  </ScrollView>
+</LinearLayout>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Star micronics *** Printer"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView_portName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PortName_Label" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/editText_PortName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.80"
+                android:ems="10"
+                android:inputType="text" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/button_Help"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:onClick="Help"
+                android:text="Help" android:layout_weight="0.01"/>
+
+        </LinearLayout>
+        
+        <LinearLayout
+	        android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+        	android:orientation="vertical" >
+
+        	<Button
+            	android:id="@+id/button_port_name_discoverly"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:gravity="center"  
+            	android:onClick="PortDiscovery"
+            	android:text="  Search  " />
+     	        	
+    	</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+			
+			
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" android:gravity="left">
+
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drawer Open Status:" />
+
+                    <Spinner
+                        android:id="@+id/spinner_SensorActive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+			</LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" android:gravity="left" android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bluetooth:" />
+
+                    <Spinner
+                        android:id="@+id/spinner_bluetooth_communication_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PortNumber:" />
+
+                    <Spinner
+                        android:id="@+id/spinner_tcp_port_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+<!--
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/button_port_name_discoverly"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="PortDiscovery"
+            android:text="  Search  " />
+
+    </LinearLayout>
+-->
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button_GetStatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="GetStatus"
+                android:text="Get Status" />
+
+            <Button
+                android:id="@+id/button_SampleReceipt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="SampleReceipt"
+                android:text="Sample Receipt" />
+
+            <Button
+                android:id="@+id/button_SamplePrintJp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="SampleRecieptJp"
+                android:text="JP Sample Receipt " />
+
+            <Button
+                android:id="@+id/button_OpenCashDrawer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="OpenCashDrawer"
+                android:text="Open Cash Drawer" >
+            </Button>
+
+            <Button
+                android:id="@+id/button_Barcodes1D"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ShowBarcode"
+                android:text="1D Barcodes" >
+            </Button>
+
+            <Button
+                android:id="@+id/button_BarCodes2D"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ShowBarcode2d"
+                android:text="2D Barcodes" >
+            </Button>
+
+            <Button
+                android:id="@+id/button_Cut"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ShowCut"
+                android:text="Cut" >
+            </Button>
+
+            <Button
+                android:id="@+id/button_TextFormating"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ShowTextFormating"
+                android:text="Text Formatting" />
+
+            <Button
+                android:id="@+id/button_KanjiTextFormating"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ShowKanjiTextFormating"
+                android:text="JP Kanji Text Formatting" />
+
+            <Button
+                android:id="@+id/button_RasterPrinting"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ShowRasterPrinting"
+                android:text="Raster Graphics Text Printing" />
+
+            <Button
+                android:id="@+id/button_ImagePrinting"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ShowImagePrinting"
+                android:text="Image File Printing" />
+
+            <Button
+                android:id="@+id/button_MSR"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="MCR"
+                android:text="MSR" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello" translatable="false">Hello World, StarIOSDKActivity!</string>
+    <string name="app_name" translatable="false">StarIOSDK</string>
+    <string name="PortName_Label" translatable="false">PortName:</string>
+    <string name="PortSettings_Label" translatable="false">PortSettings:</string>
+    <string name="printArea2inch" translatable="false">2inch (58mm)</string>
+    <string name="printArea3inch" translatable="false">3inch (78mm)</string>
+    <string name='printArea4inch' translatable="false">4inch (112mm)</string>
+    <string name="lineModeHelpMessage" translatable="false">"Welcome to the Star Printer Android SDK!"
+                                       "\nStar Line Mode for Thermal Printers"
+		                               "\n\nStar Line Mode Printers accept commands and print data line-by-line, as this mode’s name suggests." 
+                                       "\nThe data is transferred to the printer in small pieces,"
+                                       "\nallowing developers to customize receipt output with commands in any place they are needed."
+		                               "\nThis mode alone can only make use of Device Fonts installed on the printer,"
+                                       "\nwhich can be less visually appealing than TrueType Fonts."
+                                       "\n\nBy contrast, Star Raster Mode sends all print data graphically to the printer."
+		                               "\nRaster Mode commands enable supported printers to output engaging TrueType Fonts,"
+                                       "\nbut are more difficult to code for than Line Mode commands."
+                                       "\nDepending on the amount of print data sent at one time,"
+                                       "\nRaster Mode printing can result in faster printing than Line Mode printing."
+		                               "\n\n\nStar Line Mode Thermal Printers:"
+		                               "\n\nTSP650"
+                                       "\n\nTSP650II"
+	       	                           "\n\nFVP10"
+                                       "\n\nTSP700II" 
+		                               "\n\nTSP800II"
+		                               "\n\nTUP500"</string>
+
+    <string name="rasterModeHelpMessage" translatable="false">"Welcome to the Star Printer Android SDK!"
+                                       "\nStar Raster Mode for Thermal Printers"
+		                               "\n\nStar Raster Mode Printers receive all print data graphically," 
+                                       "\nallowing them to natively support the printing of engaging TrueType Fonts and output receipts at a lightning fast pace."
+                                       "\nCoding Raster commands is more complicated than Line Mode commands"
+		                               "\nas Raster commands require the entire receipt to be generated in graphical data before being sent to the printer."
+                                       "\n\nBy contrast, Star Line Mode sends all print data in small pieces line-by-line."
+                                       "\nWhile Line Mode is easier to code for when compared to Raster Mode,"
+		                               "\nLine Mode only supports the printer’s native Device Fonts which can sacrifice a fresh design of receipts."
+                                       "\nAdditionally, Line Mode can result in slower printing depending on how much print data is sent."
+                                       "\n\n\nStar Raster Mode Thermal Printers:,"
+                                       "\n\nTSP100ECO/USB/PUSB"
+                                       "\n\nTSP100LAN"
+                                       "\n\nTSP100GT"
+                                       "\n\nTSP650"
+                                       "\n\nTSP650II"
+	       	                           "\n\nFVP10"
+                                       "\n\nTSP700II" 
+		                               "\n\nTSP800II"
+		                               "\n\nTUP500"</string>
+                                       
+    <string name="escposModeHelpMessage" translatable="false">"Welcome to the Star Printer Android SDK!"
+                                       "\nESC/POS Mode for Thermal Printers"
+		                               "\n\nESC/POS Mode Printers accept commands and print data." 
+                                       "\nThe data is transferred to the printer in small pieces,"
+                                       "\nallowing developers to customize receipt output with commands in any place they are needed."
+		                               "\nThis mode alone can only make use of Device Fonts installed on the printer,"
+                                       "\n\nwhich can be less visually appealing than TrueType Fonts."
+                                       "\n\n\nESCPOS Mode Thermal Printers:,"
+                                       "\n\nBSC10"
+                                       "\n\nTSP043"
+                                       "\n\nBSC10BR"
+                                       "\n\nTSP650"
+                                       "\n\nTSP650II"
+	       	                           "\n\nFVP10"
+                                       "\n\nTSP700II" 
+		                               "\n\nTSP800II"
+		                               "\n\nTUP500"</string>
+
+    <!-- Following parameter is used "JP Sample Receipt" function. -->
+    <string name="title_company_name" translatable="false">スター電機</string>
+    <string name="title_receipt_name" translatable="false">修理報告書　兼領収書</string>
+    <string name="title_company_name_raster_3inch" translatable="false">"                 スター電機"</string>
+    <string name="title_receipt_name_raster_3inch" translatable="false">"\n         修理報告書兼領収書"</string>
+    <string name="title_company_name_raster_4inch" translatable="false">"\t                           スター電機"</string>
+    <string name="title_receipt_name_raster_4inch" translatable="false">"\n\t                   修理報告書兼領収書"</string>
+    <string name="year" translatable="false">年</string>
+    <string name="month" translatable="false">月</string>
+    <string name="day" translatable="false">日</string>
+    <string name="hour" translatable="false">時</string>
+    <string name="min" translatable="false">分</string>
+    <string name="date" translatable="false">発行日時:</string>
+    <string name="kana" translatable="false">"          ｲｹﾆｼ  ｹｲｺ   ｻﾏ"</string>
+    <string name="kana_line" translatable="false">"           ｲｹﾆｼ   ｹｲｺ   ｻﾏ"</string>
+    <string name="kana_raster" translatable="false">"                   ｲｹﾆｼ    ｹｲｺ     ｻﾏ"</string>
+    <string name="ItemInfo_3inch_line" translatable="false">"品名／型名　          数量　　 金額　   備考"
+					        	       "\n------------------------------------------------"
+					        	       "\n制御基板  \u0009        1      10,000	     配達"
+					        	       "\n操作スイッチ  \u0009        1       3,800	     配達"
+					        	       "\nパネル  \u0009        1       2,000	     配達"
+					        	       "\n技術料  \u0009        1      15,000"
+					        	       "\n出張費用  \u0009        1       5,000"
+					        	       "\n------------------------------------------------"
+					        	       "\n"</string>
+	<string name="sub_3inch_line" translatable="false">"\n\u0009                小計\u0009   \\ "</string>
+    <string name="tax_3inch_line" translatable="false">"\u0009                内税\u0009   \\  "</string>
+    <string name="total_3inch_line" translatable="false">"\u0009                合計\u0009   \\ "</string>
+    <string name="ItemInfo_4inch_line" translatable="false">"品名／型名  \u0009          数量  \u0009             金額  \u0009            備考"
+	  	                               "--------------------------------------------------------------------"
+	  	                               "\n制御基板  \u0009            1               10,000 \u0009             配達"
+	  	                               "\n操作スイッチ  \u0009            1                3,800 \u0009             配達"
+	  	                               "\nパネル  \u0009            1                2,000 \u0009             配達"
+	  	                               "\n技術料  \u0009            1               15,000"
+	  	                               "\n出張費用  \u0009            1                5,000"
+					        	       "\n--------------------------------------------------------------------"
+                                       "\n"</string>
+	<string name="sub_4inch_line" translatable="false">"\n\u0009                                 小計\u0009       \\ "</string>
+    <string name="tax_4inch_line" translatable="false">"\u0009                                 内税\u0009       \\  "</string>
+    <string name="total_4inch_line" translatable="false">"\u0009                                 合計\u0009       \\ "</string>
+    <string name="ItemInfo_3inch_raster" translatable="false">"品名／型名　          数量　　 金額　             備考"
+			                             "\n-----------------------------------------------------------------------"
+			                             "\n制御基板　          　  1         10,000                配達"
+	                                     "\n操作スイッチ            1           3,800                配達"
+	                                     "\nパネル　　          　  1           2,000                配達"
+	                                     "\n技術料　           　　 1         15,000"
+	                                     "\n出張費用　　            1           5,000"
+	                                     "\n-----------------------------------------------------------------------"
+                                         "\n"</string>
+	<string name="sub_3inch_raster" translatable="false">"                                                          小計   ￥"</string>
+    <string name="tax_3inch_raster" translatable="false">"                                                          内税   ￥  "</string>
+    <string name="total_3inch_raster" translatable="false">"                                                          合計   ￥"</string>
+    <string name="ItemInfo_4inch_raster" translatable="false">"品名／型名　                          数量　         　      金額　                     備考"
+			                             "\n------------------------------------------------------------------------------------------------------"
+			                             "\n制御基板　          　                  1                        10,000                       配達"
+	                                     "\n操作スイッチ                            1                          3,800                       配達"
+	                                     "\nパネル　　          　                  1                          2,000                       配達"
+	                                     "\n技術料　           　　                 1                        15,000"
+	                                     "\n出張費用　　                            1                          5,000"
+	                                     "\n------------------------------------------------------------------------------------------------------"
+                                         "\n"</string>
+	<string name="sub_4inch_raster" translatable="false">"\t\t\t\t\t\t\t\t\t\t\t\t\t                                                     小計\t\t   ￥"</string>
+    <string name="tax_4inch_raster" translatable="false">"\t\t\t\t\t\t\t\t\t\t\t\t\t                                                     内税\t\t   ￥  "</string>
+    <string name="total_4inch_raster" translatable="false">"\t\t\t\t\t\t\t\t\t\t\t\t\t                                                     合計\t\t   ￥"</string>
+    <string name="personalInfo" translatable="false">"　お名前：池西　圭子　様"
+						        "\n　御住所：静岡市清水区七ツ新屋"
+						        "\n　　　　　５３６番地"
+						        "\n　伝票番号：No.12345-67890"
+						        "\n\n　この度は修理をご用命頂き有難うございます。今後も故障など発生した場合はお気軽にご連絡ください。"
+						        "\n\n"</string>
+	<string name="ItemInfo_2inch_mobile" translatable="false">"品名／型名　数量　　金額　 備考"
+	                              "\n--------------------------------"
+	                              "\n制御基板　　  1　　10,000　配達"
+	                              "\n操作スイッチ  1　   3,800　配達"
+	                              "\nパネル　　　  1     2,000　配達"
+	                              "\n技術料　　　　1　　15,000"
+	                              "\n出張費用　　  1　   5,000"
+	                              "\n--------------------------------"
+	                              "\n"</string>
+	<string name="sub_2inch_mobile" translatable="false">"\n　　　　　　　　 小計　\\ "</string>
+    <string name="tax_2inch_mobile" translatable="false">"　　　　　　 　　内税　	\\  "</string>
+    <string name="total_2inch_mobile" translatable="false">"　　　　　　 　　合計　	\\ "</string>
+    <string name="ItemInfo_3inch_mobile" translatable="false">"品名／型名　          数量　　 金額　   備考"
+                                         "\n------------------------------------------------"
+                                         "\n制御基板　          　  1　　  10,000    配達"
+                                         "\n操作スイッチ            1　     3,800　  配達"
+                                         "\nパネル　　          　  1       2,000　  配達"
+                                         "\n技術料　          　　　1      15,000"
+                                         "\n出張費用　　            1　     5,000"
+                                         "\n------------------------------------------------"
+                                         "\n"</string>
+	<string name="sub_3inch_mobile" translatable="false">"\n　　　　　　　       　  　      小計   \\ "</string>
+    <string name="tax_3inch_mobile" translatable="false">"\n　　　　　　 　　  　      　    内税   \\  "</string>
+    <string name="total_3inch_mobile" translatable="false">"\n　　　　　　 　　   　　         合計   \\ "</string>
+    <string name="ItemInfo_4inch_mobile" translatable="false">"品名／型名　              数量　  　         金額　             備考"
+                                         "\n---------------------------------------------------------------------"
+                                         "\n制御基板　              　  1　　            10,000             配達"
+                                         "\n操作スイッチ                1　               3,800　           配達"
+                                         "\nパネル　　              　  1                 2,000　           配達"
+                                         "\n技術料　              　　　1                15,000"
+                                         "\n出張費用　　                1　               5,000"
+                                         "\n---------------------------------------------------------------------"
+                                         "\n"</string>
+	<string name="sub_4inch_mobile" translatable="false">"\n　　　　　　　    　       　      　      　        小計   \\ "</string>
+    <string name="tax_4inch_mobile" translatable="false">"\n　　　　　　 　　  　 　       　               　  内税   \\  "</string>
+    <string name="total_4inch_mobile" translatable="false">"\n　　　　　　 　　   　 　       　           　      合計   \\ "</string>
+    <string name="phone" translatable="false">"　お問合わせ番号　　12345‐67890"</string>
+    <string name="error" translatable="false">"現在プリンタ通信ポートが混み合っております。"</string>
+    <string name="print_text_string" translatable="false">" This is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\n This is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\n This is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\n This is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\nThis is the text that will \nbe printed on any Star \nThermal POS Printer \nlike the TSP100.\n"</string>
+    <string name="rasterdata" translatable="false">This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This is the text that will be printed on any Star</string>
+    <string-array name="barcode1d_layout_ESCPOS" translatable="false">
+        <item >Not Printed</item>
+        <item >Above the bar code</item>
+        <item >Below the bar code</item>
+        <item >Both above and below the bar code</item>
+    </string-array>
+    <string-array name="barcode1d_Font_ESCPOS" translatable="false">
+        <item >TypeA</item>
+        <item >TypeB</item>
+    </string-array>
+    <string name="kana_escpos" translatable="false">"          ｲｹﾆｼ  ｹｲｺ   ｻﾏ"</string>
+    <string name="ItemInfo_3inch_escpos" translatable="false">"品名／型名　          数量　　 金額　   備考"
+					        	       "\n------------------------------------------------"
+					        	       "\n制御基板  \u0009        1      10,000	   配達"
+					        	       "\n操作スイッチ  \u0009        1       3,800	   配達"
+					        	       "\nパネル  \u0009        1       2,000	   配達"
+					        	       "\n技術料  \u0009        1      15,000"
+					        	       "\n出張費用  \u0009        1       5,000"
+					        	       "\n------------------------------------------------"
+					        	       "\n"</string>
+	<string name="sub_3inch_escpos" translatable="false">"\n\u0009                    小計\u0009 \\"</string>
+    <string name="tax_3inch_escpos" translatable="false">"\u0009                    内税\u0009\\  "</string>
+    <string name="total_3inch_escpos" translatable="false">"\u0009                    合計\u0009\\ "</string>
+    <string name="ItemInfo_4inch_escpos" translatable="false">"品名／型名  \u0009          数量               金額              備考"
+	  	                               "\n--------------------------------------------------------------------"
+	  	                               "\n制御基板  \u0009            1               10,000              配達"
+	  	                               "\n操作スイッチ  \u0009            1                3,800              配達"
+	  	                               "\nパネル  \u0009            1                2,000              配達"
+	  	                               "\n技術料  \u0009            1               15,000"
+	  	                               "\n出張費用  \u0009            1                5,000"
+					        	       "\n--------------------------------------------------------------------"
+                                       "\n"</string>
+	<string name="sub_4inch_escpos" translatable="false">"\n\u0009                                     小計\u0009     \\ "</string>
+    <string name="tax_4inch_escpos" translatable="false">"\u0009                                     内税\u0009     \\  "</string>
+    <string name="total_4inch_escpos" translatable="false">"\u0009                                     合計\u0009     \\ "</string>
+</resources>

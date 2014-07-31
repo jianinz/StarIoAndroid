@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <ScrollView android:layout_width="fill_parent" android:id="@+id/scrollView1" android:layout_height="fill_parent">
+  <RelativeLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@+id/imageView_qrcode" android:src="@drawable/qrcode" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true"></ImageView>
+    <TextView android:text="Correction Level" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:id="@+id/textView_CorrectionLevel" android:layout_width="wrap_content" android:layout_below="@+id/imageView_qrcode"></TextView>
+    <Spinner android:id="@+id/spinner_CorrectionLevel" android:layout_alignParentLeft="true" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textView_CorrectionLevel"></Spinner>
+    <TextView android:id="@+id/textView_qrcode_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QR Code Size by EC Level" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/spinner_CorrectionLevel"/>
+    <Spinner android:id="@+id/spinner_qrcode_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_qrcode_size"/>
+    <TextView android:id="@+id/textView_module_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Model Size" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/spinner_qrcode_size"/>
+    <Spinner android:id="@+id/spinner_module_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_module_size"/>
+    <TextView android:id="@+id/textView_qrcode_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QR Code Data" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/spinner_module_size"/>
+
+    <EditText
+        android:id="@+id/editText_qrcode_data"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_qrcode_data"
+        android:inputType="text"
+        android:text="http://www.starmicronics.com" />
+
+    <Button android:text="Help" android:id="@+id/button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  android:layout_below="@+id/editText_qrcode_data" android:onClick="Help"/>
+
+    <Button
+        android:id="@+id/button_printBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="PrintBarCode"
+        android:text="Print" />
+
+  </RelativeLayout>
+  </ScrollView>
+</AbsoluteLayout>

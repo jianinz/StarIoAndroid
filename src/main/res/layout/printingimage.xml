@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <ScrollView android:layout_width="fill_parent" android:id="@+id/scrollView1" android:layout_height="fill_parent">
+
+   <RelativeLayout
+       android:id="@+id/relativeLayout1"
+       android:layout_width="fill_parent"
+       android:layout_height="390dp" >
+
+       <TextView
+           android:id="@+id/textView_ImagePrint"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Select Image"
+           android:textAppearance="?android:attr/textAppearanceMedium" >
+       </TextView>
+
+       <Spinner
+           android:id="@+id/spinner_Image"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/textView_ImagePrint" />
+
+       <TextView
+           android:id="@+id/textView_paper_width"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_alignRight="@+id/textView_ImagePrint"
+           android:layout_below="@+id/spinner_Image"
+           android:text="PaperWidth"
+           android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       <Spinner
+           android:id="@+id/spinner_paper_width"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_alignRight="@+id/textView_paper_width"
+           android:layout_below="@+id/textView_paper_width" />
+
+       <CheckBox
+           android:id="@+id/checkbox_bitImage_CompressAPI"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/spinner_paper_width"
+           android:layout_toRightOf="@+id/checkbox_bitImage_CompressAPI"
+           android:text="Compression API  " />
+
+       <ImageView
+           android:id="@+id/imageView_Image"
+           android:layout_width="288dp"
+           android:layout_height="200dp"
+           android:layout_below="@+id/checkbox_bitImage_CompressAPI"
+           android:layout_centerHorizontal="true"
+           android:src="@drawable/image1" />
+
+       <Button
+           android:id="@+id/button_print"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_below="@+id/imageView_Image"
+           android:onClick="PrintText"
+           android:text="Print" />
+
+       <Button
+           android:id="@+id/button_help"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/imageView_Image"
+           android:onClick="Help"
+           android:text="Help" />
+
+       <CheckBox
+           android:id="@+id/checkbox_bitImage_pageMode"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/spinner_paper_width"
+           android:layout_toRightOf="@+id/checkbox_bitImage_CompressAPI"
+           android:text="Page Mode" />
+
+   </RelativeLayout>
+
+  </ScrollView>
+</LinearLayout>

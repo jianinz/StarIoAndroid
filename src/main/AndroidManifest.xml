@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		  package="com.StarMicronics.StarIOSDK"
+		  android:versionName="3.8" android:versionCode="14">
+	<supports-screens
+			android:smallScreens="true"
+			android:normalScreens="true"
+			android:largeScreens="true"
+			android:resizeable="true"
+			android:anyDensity="true"/>
+	<!-- If the following tag define, android device 3.0 and earlier can not install at google play -->
+	<!--uses-feature android:name="android.hardware.usb.host" /-->
+	<uses-sdk android:minSdkVersion="7"/>
+
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+
+	<application android:icon="@drawable/staricon" android:label="@string/app_name" android:enabled="true"
+				 android:allowBackup="false">
+		<activity android:name="com.StarMicronics.StarIOSDK.PrinterTypeActivity"
+				  android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.barcodeselector"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.code39Activity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.code93Activity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.ITFActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.code128Activity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.barcodeselector2d"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.QRCodeActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.pdf417Activity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.BarcodePrintingMini"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.QrcodeMiniActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.pdf417miniActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.cutActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.textFormatingActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.kanjiTextFormatingActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.rasterPrintingActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.imagePrintingActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.textFormatingMiniActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.kanjiTextFormatingMiniActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.helpActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.helpMessage"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.LineModeHelpActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.RasterModeHelpActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.CommandTypeActivity">
+			<intent-filter>
+				<action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+			</intent-filter>
+			<meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+					   android:resource="@xml/device_filter"/>
+		</activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.StarIOSDKMobilePrinterActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.StarIOSDKPOSPrinterLineModeActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.StarIOSDKPOSPrinterRasterModeActivity"></activity>
+		<activity android:name="com.StarMicronics.StarIOSDK.DKAirCashActivity"></activity>
+	</application>
+</manifest>

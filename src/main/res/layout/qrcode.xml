@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <ImageView android:id="@+id/imageView_qrcode" android:layout_height="wrap_content" android:src="@drawable/qrcode" android:layout_width="wrap_content" android:layout_centerHorizontal="true"></ImageView>
+    <TextView android:text="Correction Level" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:id="@+id/textView_CorrectionLevel" android:layout_width="wrap_content" android:layout_below="@+id/imageView_qrcode"></TextView>
+    <Spinner android:id="@+id/spinner_CorrectionLevel" android:layout_alignParentLeft="true" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textView_CorrectionLevel"></Spinner>
+    <TextView android:text="Model" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:id="@+id/textView_Model" android:layout_width="wrap_content" android:layout_below="@+id/spinner_CorrectionLevel"></TextView>
+    <Spinner android:layout_below="@+id/textView_Model" android:id="@+id/spinner_Model" android:layout_height="wrap_content" android:layout_width="fill_parent"></Spinner>
+    <TextView android:text="Cell Size" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:id="@+id/textView_Cell_Size" android:layout_width="wrap_content" android:layout_below="@+id/spinner_Model"></TextView>
+    <Spinner android:layout_below="@+id/textView_Cell_Size" android:id="@+id/spinner_CellSize" android:layout_height="wrap_content" android:layout_width="fill_parent"></Spinner>
+    <TextView android:text="Barcode Data" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:id="@+id/textView_BarCode" android:layout_width="wrap_content" android:layout_below="@+id/spinner_CellSize"></TextView>
+    <EditText android:id="@+id/editText_QRCodeData" android:layout_alignParentLeft="true" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textView_BarCode" android:text="http://www.StarMicronics.com"/>
+    <Button android:text="Help" android:id="@+id/button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  android:layout_below="@+id/editText_QRCodeData" android:onClick="Help"/>
+    <Button android:text="Print" android:layout_alignParentRight="true" android:id="@+id/button_Print_QRCode" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/editText_QRCodeData" android:onClick="PrintBarCode"></Button>
+</RelativeLayout>

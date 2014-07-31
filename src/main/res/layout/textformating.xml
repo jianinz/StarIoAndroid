@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <ScrollView android:layout_height="fill_parent" android:id="@+id/scrollView1" android:layout_width="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:id="@+id/relativeLayout1" android:layout_height="fill_parent">
+            <CheckBox android:layout_height="wrap_content" android:id="@+id/checkBox_ShashedZero" android:text="Slashed Zero" android:layout_width="wrap_content"></CheckBox>
+            <CheckBox android:layout_height="wrap_content" android:id="@+id/checkBox_Underline" android:text="Underline" android:layout_width="wrap_content" android:layout_below="@+id/checkBox_ShashedZero"></CheckBox>
+            <CheckBox android:layout_height="wrap_content" android:id="@+id/checkBox_InvertColor" android:text="Invert Color" android:layout_width="wrap_content" android:layout_below="@+id/checkBox_Underline"></CheckBox>
+            <CheckBox android:layout_height="wrap_content" android:id="@+id/checkBox_Emphasized" android:text="Emphasized" android:layout_width="wrap_content" android:layout_below="@+id/checkBox_InvertColor"></CheckBox>
+        	<CheckBox android:id="@+id/checkBox_Upperline" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Upperline" android:layout_below="@+id/checkBox_Emphasized"></CheckBox>
+        	<CheckBox android:id="@+id/checkBox_UpsideDown" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Upside Down" android:layout_below="@+id/checkBox_Upperline"/>
+        	<TextView android:id="@+id/textView_Height" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Height Expansion" android:layout_below="@+id/checkBox_UpsideDown" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        	<Spinner android:id="@+id/spinner_Height" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textView_Height"/>
+        	<TextView android:id="@+id/textView_Width" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/spinner_Height" android:text="Width Expansion" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        	<Spinner android:id="@+id/spinner_Width" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textView_Width"/>
+        	<TextView android:id="@+id/textView_LeftMargin" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/spinner_Width" android:text="Left Margin (Max 255)" android:textAppearance="?android:attr/textAppearanceMedium" />
+        	<EditText android:id="@+id/editText_LeftMargin" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textView_LeftMargin" android:inputType="numberDecimal"/>
+        	<TextView android:id="@+id/textView_Alignment" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/editText_LeftMargin" android:text="Alignment" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        	<Spinner android:id="@+id/spinner_Alignment" android:layout_below="@+id/textView_Alignment" android:layout_height="wrap_content" android:layout_width="fill_parent"/>
+        	<TextView android:text="Text To Print" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/spinner_Alignment" android:id="@+id/textView_TextToPrint" android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+        	<EditText android:layout_height="200sp" android:layout_width="fill_parent" android:id="@+id/editText_TextToPrint" android:inputType="textMultiLine" android:layout_below="@+id/textView_TextToPrint" android:gravity="top" android:text="This feature sends raw text with decoration as defined above to the printer.\n"/>
+        	<Button android:text="Help" android:id="@+id/button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  android:layout_below="@+id/editText_TextToPrint" android:onClick="Help"/>
+        	<Button android:id="@+id/button_printText" android:layout_height="fill_parent" android:layout_width="wrap_content" android:text="Print" android:layout_below="@+id/editText_TextToPrint" android:layout_alignParentRight="true" android:onClick="PrintText"/>
+        </RelativeLayout>
+    </ScrollView>
+    
+</LinearLayout>

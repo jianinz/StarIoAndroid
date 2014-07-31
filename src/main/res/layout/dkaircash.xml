@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView_portName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Printer Port Name" />
+            
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editText_PortName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.80"
+            android:ems="10"
+            android:inputType="text" />
+
+         <Button
+             android:id="@+id/button_Help"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:layout_gravity="right"
+             android:onClick="Help"
+             android:text="Help" android:layout_weight="0.01"/>
+
+    </LinearLayout>   
+     
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"       
+        android:orientation="horizontal" >   
+     
+	 	<Button
+			android:id="@+id/button_port_name_discoverly"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:onClick="PortDiscovery"
+			android:text="  Search  " /> 
+	         
+        <LinearLayout
+        	android:layout_width="fill_parent"
+         	android:layout_height="wrap_content"
+         	android:gravity="right" >
+
+         	<LinearLayout
+            	android:layout_width="wrap_content"
+             	android:layout_height="fill_parent"
+             	android:gravity="left"
+             	android:orientation="vertical" >
+
+             	<TextView
+		         	android:id="@+id/textView_printerType"
+				 	android:layout_width="wrap_content"
+				 	android:layout_height="wrap_content"
+				 	android:text="Printer Type:" />
+
+			 	<Spinner
+				 	android:id="@+id/spinner_printerType"
+				 	android:layout_width="wrap_content"
+				 	android:layout_height="wrap_content" />	
+
+         	</LinearLayout>    
+     	</LinearLayout>
+    </LinearLayout>
+     
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"       
+        android:orientation="horizontal" >   
+	
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bluetooth:" />
+
+                <Spinner
+                    android:id="@+id/spinner_bluetooth_communication_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PortNumber:" />
+
+                <Spinner
+                    android:id="@+id/spinner_tcp_port_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout> 	
+      </LinearLayout>  
+     
+        <TextView
+            android:id="@+id/textView_drawerPortName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Drawer Port Name:" />
+	
+        <EditText
+            android:id="@+id/editText_DrawerPortName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/button_drawer_port_name_discoverly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"  
+            android:onClick="DrawerPortDiscovery"
+            android:text="  Search  "
+            android:layout_marginBottom="10dp"/>
+
+<!--function-->
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button_GetStatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="GetStatus"
+                android:text="Get Printer Status" />
+
+            <Button
+                android:id="@+id/button_GetCashDrawerStatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="GetCashDrawerStatus"
+                android:text="Get Cash Drawer Status " />
+            
+            <Button
+                android:id="@+id/button_SampleReceipt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="SampleReceipt"
+                android:text="Sample Receipt + Open Cash Drawer" />
+
+            <Button
+                android:id="@+id/button_OpenCashDrawer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="OpenCashDrawer"
+                android:text="Open Cash Drawer" >
+            </Button>
+
+        </LinearLayout>
+    </ScrollView> 
+</LinearLayout>

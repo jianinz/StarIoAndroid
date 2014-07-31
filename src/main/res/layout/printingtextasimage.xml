@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <ScrollView android:layout_width="fill_parent" android:id="@+id/scrollView1" android:layout_height="fill_parent">
+
+   <RelativeLayout
+       android:id="@+id/relativeLayout1"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent" >
+
+       <TableLayout
+           android:layout_width="wrap_content"
+           android:layout_height="fill_parent"
+           android:layout_alignParentRight="true" >
+
+           <TableRow
+               android:id="@+id/tableRow1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" >
+
+               <TextView
+                   android:id="@+id/textView_TextToPrint"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Text to Print"
+                   android:textAppearance="?android:attr/textAppearanceMedium" />
+           </TableRow>
+
+           <TableRow
+               android:id="@+id/tableRow2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" >
+
+               <EditText
+                   android:id="@+id/editText_TextToPrint"
+                   android:layout_width="wrap_content"
+                   android:layout_height="200dp"
+                   android:gravity="top"
+                   android:inputType="textMultiLine"
+                   android:text="This is the text that will be printed on any Star Thermal POS Printer like the TSP100. This will not print on dot matrix printers." >
+
+                   <requestFocus />
+               </EditText>
+           </TableRow>
+
+           <TableRow
+               android:id="@+id/tableRow3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" >
+
+               <TextView
+                   android:id="@+id/textView_Font"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Font"
+                   android:textAppearance="?android:attr/textAppearanceMedium" />
+           </TableRow>
+
+           <TableRow
+               android:id="@+id/tableRow4"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" >
+
+               <Spinner
+                   android:id="@+id/spinner_Font"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content" />
+           </TableRow>
+
+           <TableRow
+               android:id="@+id/tableRow5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" >
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" >
+
+                   <CheckBox
+                       android:id="@+id/checkbox_bold"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentTop="true"
+                       android:text="Bold" />
+
+                   <CheckBox
+                       android:id="@+id/checkbox_italics"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentLeft="true"
+                       android:layout_alignParentTop="true"
+                       android:text="Italics" />
+
+               </RelativeLayout>
+
+           </TableRow>
+
+           <TableRow
+               android:id="@+id/tableRow8"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" >
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" >
+
+                   <Spinner
+                       android:id="@+id/spinner_paperwidth"
+                       android:layout_width="113dp"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentTop="true" />
+
+                   <TextView
+                       android:id="@+id/textView_paperWidth"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerVertical="true"
+                       android:layout_toLeftOf="@+id/spinner_paperwidth"
+                       android:text="PaperWidth: "
+                       android:textAppearance="?android:attr/textAppearanceMedium" />
+
+               </RelativeLayout>
+
+           </TableRow>
+
+           <TableRow
+               android:id="@+id/tableRow6"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" >
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" >
+
+                   <CheckBox
+                       android:id="@+id/checkbox_CompressAPI"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentTop="true"
+                       android:text="Compression API" />
+
+                   <CheckBox
+                       android:id="@+id/checkbox_pageMode"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginRight="14dp"
+                       android:layout_toLeftOf="@+id/checkbox_CompressAPI"
+                       android:text="Page Mode" />
+
+               </RelativeLayout>
+
+           </TableRow>
+
+           <TableRow
+               android:id="@+id/tableRow7"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" >
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" >
+
+                   <Button
+                       android:id="@+id/button_print"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentTop="true"
+                       android:onClick="PrintText"
+                       android:text="Print" />
+
+                   <Button
+                       android:id="@+id/button_help"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_toLeftOf="@+id/button_print"
+                       android:onClick="Help"
+                       android:text="Help" />
+
+                   <TextView
+                       android:id="@+id/textView_Size"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignBaseline="@+id/button_help"
+                       android:layout_alignBottom="@+id/button_help"
+                       android:layout_alignParentLeft="true"
+                       android:gravity="center_vertical"
+                       android:text="Size:"
+                       android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                   <EditText
+                       android:id="@+id/editText_TextSize"
+                       android:layout_width="100sp"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_toRightOf="@+id/textView_Size"
+                       android:ems="10"
+                       android:inputType="numberDecimal" />
+               </RelativeLayout>
+
+           </TableRow>
+
+       </TableLayout>
+
+   </RelativeLayout>
+
+  </ScrollView>
+</LinearLayout>

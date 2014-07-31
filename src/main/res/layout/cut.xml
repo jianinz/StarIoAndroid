@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <Button android:text="Full Cut" android:id="@+id/button_FullCut" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="FullCut"></Button>
+    <Button android:text="Partial Cut" android:id="@+id/button_PartialCut" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25sp" android:onClick="PartialCut"></Button>
+    <Button android:text="Full Cut With Feed" android:id="@+id/button_FullCut_andFeed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25sp" android:onClick="FullCutWithFeed"></Button>
+	<Button android:text="Partial Cut With Feed" android:id="@+id/button_PartialCut_andFeed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25sp" android:onClick="PartialCutWithFeed"/>
+	<Button android:text="Help" android:id="@+id/button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  android:layout_below="@+id/button_PartialCut_andFeed" android:onClick="Help"/>
+</LinearLayout>

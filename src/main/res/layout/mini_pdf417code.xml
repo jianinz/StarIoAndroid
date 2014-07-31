@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <ScrollView android:layout_width="fill_parent" android:id="@+id/scrollView1" android:layout_height="fill_parent">
+  <RelativeLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pdf417" android:id="@+id/imageView1" android:layout_centerHorizontal="true"></ImageView>
+    <TextView android:id="@+id/textView_Width" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Width" android:layout_below="@+id/imageView1" android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <Spinner android:layout_width="fill_parent" android:id="@+id/spinner_Width" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_below="@+id/textView_Width"></Spinner>
+    <TextView android:id="@+id/textView_ColumnNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/spinner_Width" android:text="Column Number" android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <Spinner android:id="@+id/spinner_ColumnNumber" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_ColumnNumber"/>
+    <TextView android:id="@+id/textView_SecurityLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/spinner_ColumnNumber" android:text="Security Level" android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <Spinner android:id="@+id/spinner_SecurityLevel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_SecurityLevel"/>
+    <TextView android:id="@+id/textView_ratio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/spinner_SecurityLevel" android:text="Ratio" android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <Spinner android:id="@+id/spinner_ratio" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_ratio" android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <TextView android:id="@+id/textView_Barcode_Data" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Barcode Data" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/spinner_ratio"/>
+
+    <EditText
+        android:id="@+id/editText_Barcode_Data"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_Barcode_Data"
+        android:inputType="text"
+        android:text="http://www.starmicronics.com" />
+
+    <Button android:text="Help" android:id="@+id/button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  android:layout_below="@+id/editText_Barcode_Data" android:onClick="Help"/>
+    <Button android:id="@+id/button_printBarcode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Print" android:layout_below="@+id/editText_Barcode_Data" android:layout_alignParentRight="true" android:onClick="PrintBarCode"/>
+  </RelativeLayout>
+  </ScrollView>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <ScrollView android:id="@+id/scrollView1" android:layout_height="fill_parent" android:layout_width="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:id="@+id/relativeLayout1" android:layout_height="fill_parent">
+            <CheckBox android:text="Underline" android:id="@+id/checkbox_underline" android:layout_height="wrap_content" android:layout_width="wrap_content"></CheckBox>
+            <CheckBox android:layout_below="@+id/checkbox_underline" android:text="Emphasized" android:id="@+id/checkbox_emphasized" android:layout_height="wrap_content" android:layout_width="wrap_content"></CheckBox>
+            <CheckBox android:layout_below="@+id/checkbox_emphasized" android:text="Upside Down" android:id="@+id/chechbox_upsidedown" android:layout_height="wrap_content" android:layout_width="wrap_content"></CheckBox>
+            <CheckBox android:layout_below="@+id/chechbox_upsidedown" android:text="Invert Color" android:id="@+id/checkbox_invertcolor" android:layout_height="wrap_content" android:layout_width="wrap_content"></CheckBox>
+            <TextView android:layout_below="@+id/checkbox_invertcolor" android:text="Height Expansion" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/textview_height" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            <Spinner android:layout_below="@+id/textview_height" android:id="@+id/spinner_height" android:layout_height="wrap_content" android:layout_width="fill_parent"></Spinner>
+            <TextView android:layout_below="@+id/spinner_height" android:text="Width Expansion" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/textview_width" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            <Spinner android:layout_below="@+id/textview_width" android:id="@+id/spinner_width" android:layout_height="wrap_content" android:layout_width="fill_parent"></Spinner>
+            <TextView android:layout_below="@+id/spinner_width" android:text="Left Margin" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/textview_leftmargin" android:layout_height="wrap_content" android:layout_width="fill_parent"></TextView>
+            <EditText android:layout_below="@+id/textview_leftmargin" android:id="@+id/edittext_leftmargin" android:layout_height="wrap_content" android:layout_width="fill_parent" android:inputType="numberDecimal"/>
+            <TextView android:layout_below="@+id/edittext_leftmargin" android:text="Alignment" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/textview_alignment" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            <Spinner android:id="@+id/spinner_alignment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textview_alignment" />
+            <TextView android:text="Text To Print" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/spinner_alignment" android:id="@+id/textView_TextToPrint" android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+            <EditText android:layout_height="200sp" android:layout_width="fill_parent" android:id="@+id/editText_TextToPrint" android:inputType="textMultiLine" android:layout_below="@+id/textView_TextToPrint" android:gravity="top" android:text="本欄の入力文字は、上部で指定された装飾設定とともにプリンタへ送信されます。\n"/>
+        	<Button android:text="Help" android:id="@+id/button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  android:layout_below="@+id/editText_TextToPrint" android:onClick="Help"/>
+        	<Button android:id="@+id/button_printText" android:layout_height="fill_parent" android:layout_width="wrap_content" android:text="Print" android:layout_below="@+id/editText_TextToPrint" android:layout_alignParentRight="true" android:onClick="PrintText"/>
+        </RelativeLayout>
+    </ScrollView>    
+</LinearLayout>

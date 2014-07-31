@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <ScrollView android:layout_width="fill_parent" android:id="@+id/scrollView1" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pdf417" android:id="@+id/imageView_PDFImage" android:layout_centerHorizontal="true"></ImageView>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView_BarcodeSize" android:text="Barcode Size" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/imageView_PDFImage"></TextView>
+        	<Spinner android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_BarcodeSize" android:id="@+id/spinner_BarcodeSize"> </Spinner>
+        	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView_Height" android:text="height=1≤h≤99" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/spinner_BarcodeSize"/>
+        	<EditText android:id="@+id/editText_Height" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/textView_Height" android:inputType="number"/>
+        	<EditText android:id="@+id/editText_Width" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/editText_Height" android:layout_below="@+id/textView_Height" android:inputType="number"/>
+        	<TextView android:id="@+id/textView_Width" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@+id/editText_Width" android:layout_toRightOf="@+id/textView_Height" android:text="width=1≤w≤99" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        	<TextView android:id="@+id/textView_AspectRatio" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        	<TextView android:id="@+id/textView_Model" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aspect Ratio" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/editText_Height"/>
+        	<Spinner android:id="@+id/spinner_AspectRatio" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_Model"/>
+
+        	<TextView
+        	    android:id="@+id/textView_XDirection"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_below="@+id/spinner_AspectRatio"
+        	    android:text="X Direction Size"
+        	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        	<Spinner android:id="@+id/spinner_XDirection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_XDirection"/>
+        	<TextView android:id="@+id/textView_securityLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/spinner_XDirection" android:text="Security Level" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        	<Spinner  android:id="@+id/spinner_SecurityLevel1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/textView_securityLevel"/>
+        	<TextView android:id="@+id/textView_Barcode_Data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/spinner_SecurityLevel1" android:textAppearance="?android:attr/textAppearanceMedium" android:text="Barcode Data"/>
+        	<EditText android:id="@+id/editText_pdf417_barcodeData" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textView_Barcode_Data" android:text="http://www.starmicronics.com"/>
+        	<Button android:text="Help" android:id="@+id/button_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"  android:layout_below="@+id/editText_pdf417_barcodeData" android:onClick="Help"/>
+        	<Button android:text="Print" android:layout_alignParentRight="true" android:id="@+id/button_Print_PDF417" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/editText_pdf417_barcodeData" android:onClick="PrintBarCode"></Button>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
