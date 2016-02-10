@@ -1,4 +1,4 @@
-StarIoAndroid
+StarIoAndroid (Deprecated)
 =============
 
 Compare to project that you found here: http://www.starasia.com/tsp650driverdownload.asp
